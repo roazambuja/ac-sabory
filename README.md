@@ -9,7 +9,7 @@ Com fins educacionais, empregaremos o Laragon como nosso servidor web.
 
 Clone este repositório para o seu ambiente local usando o seguinte comando:
 
-`git clone https://github.com/pdroavila/sprint-brudam.git`
+`git clone https://github.com/roazambuja/ac-sabory.git`
 
 ### 2. Copiar o arquivo .env
 
@@ -41,4 +41,4 @@ Após executar as migrações, você pode executar o seeder para preencher o ban
 
 ## Acesso
 
-O servidor ficará habilitado em `localhost`.
+O servidor ficará habilitado em `ac-sabory.test`.
