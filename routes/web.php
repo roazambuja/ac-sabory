@@ -15,7 +15,7 @@ use App\Http\Controllers\{ProdutoController, PedidoController};
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('/cadastrar/produto');
 });
 //Roda destinada 
 Route::resource('produtos', ProdutoController::class);
