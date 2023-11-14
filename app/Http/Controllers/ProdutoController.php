@@ -46,7 +46,7 @@ class ProdutoController extends Controller
 
             return response()->json(['status' => 1,'message' => 'Cadastrado com sucesso!']);
         }catch(\Exception $e){
-            return response()->json(['status' => 0, 'message' => 'Erro ao cadastrar produto.', 'error' => $e]);
+            return response()->json(['status' => 0, 'message' => 'Erro ao cadastrar produto.', 'error' => $e->getMessage()]);
         }
     }
 
