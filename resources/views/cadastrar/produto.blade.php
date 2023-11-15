@@ -25,16 +25,16 @@
             <form action="/produtos" method="post"> 
                 @csrf <!-- {{ csrf_field() }} -->
                 <label for="nome"> Nome
-                    <input id="nome" type="text" name="nome">
+                    <input required id="nome" type="text" name="nome">
                 </label>
                 <label for="valor" class="half"> Valor
-                    <input id="valor" type="number" name="valor">
+                    <input required id="valor" type="number" name="valor">
                 </label>
                 <label for="quantidade" class="half"> Quantidade
-                    <input id="quantidade" type="number" name="quantidade">
+                    <input required id="quantidade" type="number" name="quantidade">
                 </label>
                 <label for="descricao"> Descrição
-                    <textarea id="descricao" name="descricao"></textarea>
+                    <textarea required id="descricao" name="descricao"></textarea>
                 </label>
                 <button type="submit">Cadastrar</button>
             </form>
