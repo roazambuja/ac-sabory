@@ -31,7 +31,7 @@ Route::post('produto/cadastrar', [ProdutoController::class, 'store']);
 Route::get('/produto/{id}', [ProdutoController::class, 'show']);
 
 //Visualizar todos pedidos
-Route::get('/pedidos', [PedidoController::class, 'index']);
+Route::get('/', [PedidoController::class, 'index']);
 
 //Cadastrar um produto - View
 Route::get('pedido/cadastrar', [PedidoController::class, 'create']);
