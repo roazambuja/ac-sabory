@@ -14,9 +14,9 @@ use App\Http\Controllers\{ProdutoController, PedidoController};
 |
 */
 
-Route::get('/', function () {
-    return view('/cadastrar/produto');
-});
+// Route::get('/', function () {
+//     return view('/cadastrar/produto');
+// });
 
 //Visualizar todos produtos
 Route::get('/produtos', [ProdutoController::class, 'index']);
