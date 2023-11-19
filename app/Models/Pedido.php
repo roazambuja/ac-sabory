@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     use HasFactory;
+
+    protected $table = 'pedidos'; // Especifique o nome da tabela
+
+    protected $fillable = [
+        'id',
+        'produto_id',
+        'status',
+        'observacao'
+    ];
 }
