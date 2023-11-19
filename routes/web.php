@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{ProdutoController, PedidoController};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,9 @@ use App\Http\Controllers\{ProdutoController, PedidoController};
 |
 */
 
+Route::get('/', function () {
+    return view('/cadastrar/produto');
+});
 //Roda destinada 
 Route::resource('produtos', ProdutoController::class);
 
