@@ -33,11 +33,11 @@ Route::get('/produto/{id}', [ProdutoController::class, 'show']);
 //Visualizar todos pedidos
 Route::get('/', [PedidoController::class, 'index']);
 
-//Cadastrar um produto - View
+//Cadastrar um pedido - View
 Route::get('pedido/cadastrar', [PedidoController::class, 'create']);
 
-//Cadastrar um produto - Post
+//Cadastrar um pedido - Post
 Route::post('pedido/cadastrar', [PedidoController::class, 'store']);
 
-//Visualizar um produto em específico
+//Visualizar um pedido em específico
 Route::get('/pedido/{id}', [PedidoController::class, 'show']);
