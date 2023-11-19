@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{ProdutoController, PedidoController};
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/cadastrar/produto');
 });
+//Roda destinada 
+Route::resource('produtos', ProdutoController::class);
+
+
+Route::resource('pedido', PedidoController::class);
