@@ -22,9 +22,9 @@
             <img src="/img/logo.png" alt="tag">
             <h1>AC Sabory</h1>
             <div class="menu">
-                <a class="" href="/pedido/create">Fazer Pedidos</a>
-                <a class="" href="#">Pedidos</a>
-                <a class="" href="/produtos/create">Cadastrar Produtos</a>
+                <a class="" href="/pedido/cadastrar">Fazer Pedidos</a>
+                <a class="" href="/">Pedidos</a>
+                <a class="" href="/produto/cadastrar">Cadastrar Produtos</a>
                 <a class="" href="/produtos">Estoque</a>
             </div>
         </header>

@@ -15,7 +15,6 @@ class Produto extends Model
         'nome',
         'valor',
         'quantidade',
-        'descricao',
-        // Outros campos, se houver
+        'descricao'
     ];
 }

@@ -3,7 +3,7 @@ $(document).ready(function () {
         var formData = $("#produtoForm").serialize();
         $.ajax({
             type: "POST",
-            url: "/produtos", 
+            url: "/produto/cadastrar", 
             data: formData,
             success: function (response) {
                 console.log(response.status);
@@ -16,5 +16,4 @@ $(document).ready(function () {
         });
     });
 });
-
 

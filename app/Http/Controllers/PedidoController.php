@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produto;
 use Illuminate\Http\Request;
+use App\Models\Pedido;
 
-class ProdutoController extends Controller
+class PedidoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
         try{
-            $produtos = Produto::all();
+            $pedidos = Pedido::all();
 
-            return view('produtos', ["produtos" => $produtos]);
+            return view('pedidos', ["pedidos" => $pedidos]);
 
         }catch (\Exception $e){
             return response()->json(['status' => 0, 'message' => 'Erro ao acessar a rota', 'error' => $e]);
@@ -28,7 +27,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('cadastrar.produto');
+        return 'tem que criar a view de cadastrar pedido';
     }
 
     /**
@@ -37,16 +36,14 @@ class ProdutoController extends Controller
     public function store(Request $request)
     {
         try{
-            Produto::create([
-                "nome" => $request['nome'],
-                "valor" => $request['valor'],
-                "quantidade" => $request['quantidade'],
-                "descricao" => $request['descricao']
+            Pedido::create([
+                "produto_id" => $request['produto_id'],
+                "observacao" => $request['observacao'],
             ]);
 
             return response()->json(['status' => 1,'message' => 'Cadastrado com sucesso!']);
         }catch(\Exception $e){
-            return response()->json(['status' => 0, 'message' => 'Erro ao cadastrar produto.', 'error' => $e->getMessage()]);
+            return response()->json(['status' => 0, 'message' => 'Erro ao cadastrar pedido.', 'error' => $e->getMessage()]);
         }
     }
 
@@ -55,24 +52,22 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        $produto = Produto::find($id);
+        $pedido = Pedido::find($id);
 
         try{
-            if(!$produto)
-                return response()->json(['status' => 1, 'message' => 'Produto não encontrado']);
+            if(!$pedido)
+                return response()->json(['status' => 1, 'message' => 'Pedido não encontrado']);
             
-            return response()->json(['status' => 1, 'message' => 'Produto encontrado', 'dados' => $produto]);
+            return response()->json(['status' => 1, 'message' => 'Pedido encontrado', 'dados' => $pedido]);
         }catch(\Exception $e){
             return response()->json(['status' => 0, 'message' => 'Erro a rota', 'error' => $e->getMessage()]);
-        }
-        
-        // return view('produto.show', ['produto' => $produto]);
+        }        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Produto $produto)
+    public function edit(string $id)
     {
         //
     }
@@ -80,7 +75,7 @@ class ProdutoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Produto $produto)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -88,7 +83,7 @@ class ProdutoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Produto $produto)
+    public function destroy(string $id)
     {
         //
     }
